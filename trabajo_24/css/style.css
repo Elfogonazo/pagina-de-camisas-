@@ -1,0 +1,161 @@
+@charset "utf-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+	background-color: black;
+}
+.header{
+    height: 100%px;
+	width: 100%;
+    background-image: url("https://thumbs.dreamstime.com/t/fondo-geom%C3%A9trico-de-la-bandera-del-papel-pintado-arte-pixel-juego-minecraft-textura-cubo-tierra-e-hierba-con-para-sus-proyectos-152699354.jpg");
+}
+.nav ul{
+	float: bottom;
+	position: relative;
+    list-style-type: none;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.logo{
+	margin-top: 30px;
+	margin-left: 30px;
+	height: 50px;
+}
+.logo img:hover{
+	height: 60px;
+}
+.nav{
+	width: 100%;
+}
+.nav li{
+    margin: 10px;
+	float: left;
+	width: 200px;
+    text-align: center;
+	font: bold 30px calibri;
+}
+.nav li a:hover{
+    color: green;
+	text-shadow: rgba(0, 0, 0, 5) 2px 3px 5px;
+	
+}
+.nav li a{
+	display: block;
+    padding: 9px;
+	color:bisque;
+	text-decoration: none;
+}
+.cuerpo{
+	background-image: url("https://as.com/meristation/imagenes/2020/10/23/noticias/1603445369_648285_1603445409_noticia_normal.jpg");
+	height: 600px;
+	list-style-type: none;
+	color: azure;
+	margin-left: 31px;
+	margin-right: 31px;
+	font: bold 30px calibri;
+}
+.group a,li{
+	margin-left: 10%;
+	margin-bottom: 30px;
+}
+.group p{
+	margin-left: 10%;
+	font-size: 20px;	
+}
+.group h1{
+	margin-top: 10%;
+	margin-left: 10%;
+}
+.group img:hover{
+	border: 5px solid aqua;
+	cursor: pointer;
+}
+.aside{
+	background-image: url("../img/fondo4.png");	
+	padding: 35px;
+	font: bold 15px calibri;
+	text-shadow: rgba(0, 0, 0, 5) 2px 3px 5px;
+	list-style-type: none;
+}
+.group2{
+	padding-right: 20px;
+}
+
+.explora{
+	background-color: floralwhite;
+	height: 100%;
+	text-align: center;
+}
+.explora img:hover{
+	border: 3px solid greenyellow;
+	cursor: pointer;
+	height: 440px;
+}
+.explora p{
+	font-size: 20px;
+	text-align: center;
+	color: black;
+}
+.footer{
+	height: 250px;
+	font: bold 20px calibri;
+	text-shadow: rgba(0, 0, 0, 5) 2px 3px 5px;
+	text-align: center;
+	background-image: url("../img/fondo3.png");
+}
+.footer img:hover{
+	border: 3px solid greenyellow;
+	cursor: pointer;
+}
+.f2{
+	background-image: url("../img/fondo5.png");	
+	height: 130px;
+}
+.f2{
+	margin-top: 0px;
+}
+/* MAIN */
+[class*="col-"] {
+	float: left;
+}
+/* For mobile phones: */
+[class*="col-"] {
+	width: 100%;
+}
+@media only screen and (min-width: 768px) {
+	/* For desktop: */
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+	.group{
+	  display: grid;
+	  grid-template-columns: auto ;
+	}
+    .group2{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+	.juegos{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+	.navegar{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+}

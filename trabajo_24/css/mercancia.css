@@ -1,0 +1,126 @@
+@charset "utf-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header{
+    background-color: black;
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+    color: darkgray;
+    font: bold 20px calibri;
+	text-shadow: rgba(0, 0, 0, 5) 2px 3px 5px;
+}
+.nav{
+    height: 150px;
+    background-image: url("https://thumbs.dreamstime.com/t/fondo-geom%C3%A9trico-de-la-bandera-del-papel-pintado-arte-pixel-juego-minecraft-textura-cubo-tierra-e-hierba-con-para-sus-proyectos-152699354.jpg");
+}
+.logo{
+	height: 50px;
+}
+.logo img:hover{
+	height: 60px;
+}
+.botones ul{
+	text-align: center;
+	float: bottom;
+	position: relative;
+    list-style-type: none;
+	margin-left: 120px;
+	margin-top: 10px;
+    font-size: 20px;
+}
+.group2 img{
+	margin-left: 120px;
+	float: bottom;
+	position: relative;
+    list-style-type: none;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.botones li{
+    margin: 10px;
+	width: 200px;
+	float: left;
+    text-align: center;
+	font: bold 30px calibri;
+}
+.botones li a:hover{
+    color: green;
+	text-shadow: rgba(0, 0, 0, 5) 2px 3px 5px;
+	
+}
+.botones li a {
+	display: block;
+    padding: 9px;
+	color:bisque;
+	text-decoration: none;
+}
+.a2{
+	text-align: center;
+	background-image: url("../img/fondo6.png");	
+	height: 150px;
+	font: bold 30px calibri;
+	text-shadow: rgba(0, 0, 0, 5) 2px 3px 5px;
+	margin-bottom:70px;
+}
+.aside{
+	text-align: center;
+	margin-left: 35px;
+	font: bold 30px calibri;
+	text-shadow: rgba(0, 0, 0, 5) 2px 3px 5px;
+	list-style-type: none;
+}
+.aside img:hover{
+	border: 3px solid greenyellow;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.footer{
+	margin-top: 20px;
+	height: 250px;
+	font: bold 20px calibri;
+	text-shadow: rgba(0, 0, 0, 5) 2px 3px 5px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.37);
+}
+.footer img:hover{
+	border: 3px solid greenyellow;
+	cursor: pointer;
+}
+.f3{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+	/* For desktop: */
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+	.group{
+	  display: grid;
+	  grid-template-columns: auto auto auto;
+	}
+    .group2{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+	.group3{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}

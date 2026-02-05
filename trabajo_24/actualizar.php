@@ -1,0 +1,149 @@
+<html>
+    <head>
+		<meta charset="utf-8">
+        <title>MINECRAFT</title>
+		<link rel="stylesheet" href="css/agregar.css">
+        <script src="js/javascript.js"></script>
+    </head>
+    <body>
+        <div class="col-12">
+            <div class="header">
+        <div class="group4">
+                    <div class="logo">
+                        <a href="index.php"><img src="https://cdn.worldvectorlogo.com/logos/minecraft.svg" height="50" hspace="100" vspace="100"></a>
+                    </div>
+                    <div class="nav">
+                    <ul>
+                        <li><a href='agregar.php'>agregar</a></li>
+                        <li><a href='eliminar.php'>eliminar</a></li>
+                        <li><a href='actualizar.php'>actualizar</a></li>
+                        <li><a href='buscar.php'>buscar</a></li>
+                        <li><a href='instalar.php'>instalar</a></li>
+                    </ul>					   
+                    </div>
+                </div>    
+            </div>    
+        </div>
+        <div class="col-12">
+            <div class="aside"><p>actualizar</p></div>
+            <div class="buscar">
+                <form action="" method="post" class="group2">
+                    <label>ID a Actualizar</label>
+                    <input type="text" name="id" required>
+                    <label><p>color de camisa</p></label>
+                    <input type="text" name="color" required>
+                    <label><p>talla</p></label>
+                        <select name="talla" id=""required>
+                            <option value="XXS">XXS</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                        </select>
+                    <label><p>Precio</p></label>
+                    <input type="number" name="precio" step="any"required>
+                    <label><p>personaje</p> </label>
+                        <select name="personaje" id=""required>
+                            <option value="enderman">enderman</option>
+                            <option value="creeper">creeper</option>
+                            <option value="cerdo">cerdo</option>
+                            <option value="steve">steve</option>
+                        </select>
+                    <label><p>fecha de fabricacion</p></label>
+                    <input type="date" name="fecha"required>
+                    <label><p>detalles de producto</p></label>
+                        <div class="group5"required>
+                            <p><input type="checkbox" name="delgado"> delgado</p>
+                                        
+                            <p><input type="checkbox" name="AbsorbeLaHumedad"> Absorbe La Humedad</p>
+                                            
+                            <p><input type="checkbox" name="TejidoMezclado"> Tejido Mezclado</p>
+                                            
+                            <p><input type="checkbox" name="LavarAMaquina"> Lavar A Maquina</p>
+                        </div>
+                    <label>estilo</label>
+                    <div class="group5">
+                        <p><input type="radio" name="estilo" value="niño" required> niño</p>
+                        <p><input type="radio" name="estilo" value="hombre"> hombre</p>
+                        <p><input type="radio" name="estilo" value="mujer" > mujer</p>
+                        <p><input type="radio" name="estilo" value="mujer"> mujer</p>
+                    </div>
+                    <label><p>material</p></label>
+                    <input type="text" name="material">
+                    <br>
+                    <input type="submit"name="actualizar" value="actualizar" >
+                    <br>
+                    <?php
+                    if (isset($_POST['actualizar'])) {
+
+                        $id = $_POST['id'];
+
+                        $talla = $_POST['talla'];
+                        $color = $_POST['color'];
+                        $precio = $_POST['precio'];
+                        $personaje = $_POST['personaje'];
+                        $fecha = $_POST['fecha'];
+                        $material = $_POST['material'];
+                        $estilo = $_POST['estilo'];
+
+                        
+                        if(isset($_POST["delgado"]))
+                        $delgado = true;
+                        else
+                            $delgado = false;
+                        if(isset($_POST["AbsorbeLaHumedad"]))
+                            $AbsorbeLaHumedad = true;
+                        else
+                            $AbsorbeLaHumedad = false;
+                        if (isset($_POST["TejidoMezclado"]))
+                            $TejidoMezclado = true;
+                        else
+                            $TejidoMezclado = false;
+                        if(isset($_POST["LavarAMaquina"]))
+                            $LavarAMaquina = true;
+                        else
+                            $LavarAMaquina = false;
+                        
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "jaime_duarte";
+
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+
+                        $sql = "UPDATE camisas SET color = '$color', talla = '$talla', precio = '$precio',
+                        personaje = '$personaje', fecha = '$fecha', material = '$material', estilo = '$estilo', delgado = '$delgado',
+                        AbsorbeLaHumedad = '$AbsorbeLaHumedad', TejidoMezclado = '$TejidoMezclado', LavarAMaquina = '$LavarAMaquina' WHERE id = '$id'";
+
+                        if ($conn->query($sql) === TRUE){
+                            echo "<input type='text' value='se ha actualizado correctamente la informacion' readonly>";
+                        } else {
+                            echo "<input type='text' value='ha ocurrido un error al actualizar la informacion' readonly>";
+                        }
+                        $conn->close();
+                    } 
+                    
+                ?>
+                </form> 
+            </div>
+        </div>
+		<div class="col-12">
+            <div class="footer">
+                <p>sigue a minecraft en</p>
+                <div class="footer3">
+                    <img src="img/s1.png" alt="">
+                    <img src="img/s2.png" alt="">
+                    <img src="img/s3.png" alt="">
+                    <img src="img/s4.png" alt="">
+                </div>
+                <div> 
+                    <p>El juego multiplataforma está disponible en Xbox One, Playstation 4, Nintendo Switch, iOS, Android y Windows 10.</p> 
+                    <p>El juego multijugador requiere una cuenta de Microsoft. Es necesario Xbox Live Gold para el juego multijugador en línea en Xbox One.</p> 
+                    <p>Se requiere una suscripción a PlayStation Plus para el juego multijugador en Playstation 4.</p> 
+                    <p>Es necesaria una suscripción a Nintendo Switch Online para el juego multijugador en línea en Nintendo Switch.</p>
+                </div>
+            
+            </div>
+        </div>			
+    </body>
+</html>
+
